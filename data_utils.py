@@ -44,4 +44,15 @@ def visualize_sample():
     plt.show()
 
 
-visualize_sample()
+"""
+@description: Creates dataloader and generates random data batch
+"""
+
+
+def gen_batch():
+    batch_size = 64
+
+    train_dataloader = DataLoader(training_data, batch_size=batch_size)
+    test_dataloader = DataLoader(test_data, batch_size=batch_size)
+
+    return [train_dataloader, test_dataloader]
